@@ -1,0 +1,10 @@
+c:\users\kawanuma\documents\visual studio 2013\Projects\LeafSpyInserter\LeafSpyInserter\bin\Debug\LeafSpyInserter.exe.config
+c:\users\kawanuma\documents\visual studio 2013\Projects\LeafSpyInserter\LeafSpyInserter\bin\Debug\LeafSpyInserter.exe
+c:\users\kawanuma\documents\visual studio 2013\Projects\LeafSpyInserter\LeafSpyInserter\bin\Debug\LeafSpyInserter.pdb
+c:\users\kawanuma\documents\visual studio 2013\Projects\LeafSpyInserter\LeafSpyInserter\obj\Debug\LeafSpyInserter.csprojResolveAssemblyReference.cache
+c:\users\kawanuma\documents\visual studio 2013\Projects\LeafSpyInserter\LeafSpyInserter\obj\Debug\LeafSpyInserter.Form1.resources
+c:\users\kawanuma\documents\visual studio 2013\Projects\LeafSpyInserter\LeafSpyInserter\obj\Debug\LeafSpyInserter.Properties.Resources.resources
+c:\users\kawanuma\documents\visual studio 2013\Projects\LeafSpyInserter\LeafSpyInserter\obj\Debug\LeafSpyInserter.csproj.GenerateResource.Cache
+c:\users\kawanuma\documents\visual studio 2013\Projects\LeafSpyInserter\LeafSpyInserter\obj\Debug\LeafSpyInserter.exe
+c:\users\kawanuma\documents\visual studio 2013\Projects\LeafSpyInserter\LeafSpyInserter\obj\Debug\LeafSpyInserter.pdb
+c:\users\kawanuma\documents\visual studio 2013\Projects\LeafSpyInserter\LeafSpyInserter\obj\Debug\LeafSpyInserter.csproj.ResolveComReference.cache
