@@ -60,7 +60,18 @@
             this.driverIDComboBox.FormattingEnabled = true;
             this.driverIDComboBox.Items.AddRange(new object[] {
             "1（富井先生）",
-            "4（森先生）"});
+            "4（森先生）",
+            "17 植村",
+            "20 茨城",
+            "21 濱崎",
+            "24 小池",
+            "26 磯部",
+            "28 吉瀬",
+            "29 猪谷",
+            "30 勝村",
+            "31 渡辺",
+            "32 石田",
+            "33 深野"});
             this.driverIDComboBox.Location = new System.Drawing.Point(15, 55);
             this.driverIDComboBox.Name = "driverIDComboBox";
             this.driverIDComboBox.Size = new System.Drawing.Size(121, 20);
@@ -83,7 +94,10 @@
             this.carIDComboBox.FormattingEnabled = true;
             this.carIDComboBox.Items.AddRange(new object[] {
             "3（LEAF）",
-            "8（LEAF_XXXXXX）"});
+            "8（LEAF_XXXXXX）",
+            "13 2018春LEAF1",
+            "14 2018春LEAF2",
+            "15 2018春DAYZ"});
             this.carIDComboBox.Location = new System.Drawing.Point(154, 55);
             this.carIDComboBox.Name = "carIDComboBox";
             this.carIDComboBox.Size = new System.Drawing.Size(121, 20);
@@ -98,7 +112,7 @@
             this.startInsertingButton.TabIndex = 4;
             this.startInsertingButton.Text = "Start inserting";
             this.startInsertingButton.UseVisualStyleBackColor = true;
-            //this.startInsertingButton.Click += new System.EventHandler(this.startInsertingButton_Click);
+            this.startInsertingButton.Click += new System.EventHandler(this.startInsertingButton_Click);
             // 
             // indexLabel
             // 

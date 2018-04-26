@@ -23,7 +23,7 @@ namespace NMEAInserter
         private void Form1_Load(object sender, EventArgs e)
     {
     }
-        public static int driverID = 0, carID = 0;
+        public static int driverID = 0, carID = 0, sensorID = 0;
         public static bool nullAllowance;
 
         // SENSOR_ID
@@ -39,27 +39,28 @@ namespace NMEAInserter
 
         private void startInsertingButton_Click(object sender, EventArgs e)
         {
+            // DRIVER_IDが設定されているかをチェック
             if (driverIDComboBox.SelectedIndex == -1)
             {
                 errorCodeLabel.ForeColor = Color.Red;
                 errorCodeLabel.Text = "Select Driver ID";
                 return;
             }
-
+            // CAR_IDが設定されているかをチェック
             if (carIDComboBox.SelectedIndex == -1)
             {
                 errorCodeLabel.ForeColor = Color.Red;
                 errorCodeLabel.Text = "Select Car ID";
                 return;
             }
-
+            // ファイルパスが設定されているかをチェック
             if (filePath == null)
             {
                 errorCodeLabel.ForeColor = Color.Red;
                 errorCodeLabel.Text = "Select inserting file";
                 return;
             }
-
+            
             errorCodeLabel.ForeColor = Color.Blue;
             errorCodeLabel.Text = "Inserting start ...";
 
@@ -68,29 +69,96 @@ namespace NMEAInserter
             /*** Driver ID の決定 ***/
             switch (driverIDComboBox.SelectedIndex)
             {
+                #region GUIで選択した名前とdriverIDの対応付け
+                // 富井先生
                 case 0:
                     driverID = 1;
                     break;
+                // 森先生
                 case 1:
                     driverID = 4;
                     break;
+                // 植村さん
+                case 2:
+                    driverID = 17;
+                    break;
+                // 茨城さん
+                case 3:
+                    driverID = 20;
+                    break;
+                // 濱崎さん
+                case 4:
+                    driverID = 21;
+                    break;
+                // 小池さん
+                case 5:
+                    driverID = 24;
+                    break;
+                // 磯部さん
+                case 6:
+                    driverID = 26;
+                    break;
+                // 吉瀬
+                case 7:
+                    driverID = 28;
+                    break;
+                // 猪谷
+                case 8:
+                    driverID = 29;
+                    break;
+                // 勝村
+                case 9:
+                    driverID = 30;
+                    break;
+                // 渡辺
+                case 10:
+                    driverID = 31;
+                    break;
+                // 石田さん
+                case 11:
+                    driverID = 32;
+                    break;
+                // 深野さん
+                case 12:
+                    driverID = 33;
+                    break;
+#endregion
             }
 
             /*** Car ID の決定 ***/
             switch (carIDComboBox.SelectedIndex)
             {
+                #region GUIで選択した車と、carIDの対応付け
+                // 富井先生のleaf
                 case 0:
                     carID = 3;
                     break;
+                // leaf?
                 case 1:
                     carID = 8;
                     break;
+                // 2018春leaf1
+                case 2:
+                    carID = 13;
+                    break;
+                // 2018春leaf2
+                case 3:
+                    carID = 14;
+                    break;
+                // 2018春DAYZ
+                case 4:
+                    carID = 15;
+                    break;
+                #endregion
             }
 
             /**** Trip ID のNullの許容の確認 ****/
             nullAllowance = this.nullAllowanceCheckBox.Checked;
 
             Console.WriteLine("Driver ID : " + driverID + ", Car ID : " + carID + ", NullAllowance : " + nullAllowance);
+
+            // インサート本処理の呼び出し
+            insertData(this.filePath, driverID, carID, sensorID, nullAllowance);
         }
 
         private void Form1_DragEnter(object sender, DragEventArgs e)
@@ -110,25 +178,34 @@ namespace NMEAInserter
         {
             // ファイルが渡されていなければ、何もしない
             if (!e.Data.GetDataPresent(DataFormats.FileDrop)) return;
-            string[] files = (string[])e.Data.GetData(DataFormats.FileDrop, false);
-            // 渡されたファイルに対して処理を行う
-            for (int i = 0; i < files.Length; i++)
-            //Parallel.For(0, files.Length, i =>
-            {
-                filePath = files[i];
-                /*foreach (var filePath in (string[])e.Data.GetData(DataFormats.FileDrop))
-                {
-                    fileNameLabel.Text = filePath;
-                    this.filePath = filePath;*/
-                insertData(filePath, 1, 3);
-                //Console.WriteLine("Success : " + filePath + System.Environment.NewLine);
 
-        }
+            // ファイルが渡されていた場合には、そのファイルパスを変数に格納する。
+            foreach (var filePath in (string[])e.Data.GetData(DataFormats.FileDrop))
+            {
+                fileNameLabel.Text = filePath;
+                this.filePath = filePath;
+            }
+            //string[] files = (string[])e.Data.GetData(DataFormats.FileDrop, false);
+            // 渡されたファイルに対して処理を行う
+            //for (int i = 0; i < files.Length; i++)
+            ////Parallel.For(0, files.Length, i =>
+            //{
+            //    filePath = files[i];
+            //    /*foreach (var filePath in (string[])e.Data.GetData(DataFormats.FileDrop))
+            //    {
+            //        fileNameLabel.Text = filePath;
+            //        this.filePath = filePath;*/
+            //    insertData(filePath, 1, 3);
+            //    //Console.WriteLine("Success : " + filePath + System.Environment.NewLine);
+
+            //}
     //});
-            MessageBox.Show("インサート終了",
-            "インサート終了",
-             MessageBoxButtons.OK,
-                MessageBoxIcon.Asterisk);
+
+            // インサート処理は切り分けるので、コメントアウト
+            //MessageBox.Show("インサート終了",
+            //"インサート終了",
+            // MessageBoxButtons.OK,
+            //    MessageBoxIcon.Asterisk);
         }
 
         private static TextFieldParser GetParser(string filePath)
@@ -143,7 +220,7 @@ namespace NMEAInserter
 
             return parser;
         }
-        private void insertData(String filePath, int driverID, int carID)
+        private void insertData(String filePath, int driverID, int carID, int sensorID, bool nullAllowance)
         {
             
             DataTable TRIPS_TABLE = new DataTable();
@@ -171,7 +248,7 @@ namespace NMEAInserter
                 sqlConnection.Open();
 
                 /***** TRIPS_TABLE生成 Start *****/
-                string query = "SELECT TRIP_ID, START_TIME, END_TIME FROM [ECOLOGDBver2].[dbo].[TRIPS] WHERE DRIVER_ID = " + driverID + " AND CAR_ID = " + carID + "AND SENSOR_ID = " + SENSOR_ID;
+                string query = "SELECT TRIP_ID, START_TIME, END_TIME FROM [ECOLOGDBver2].[dbo].[TRIPS] WHERE DRIVER_ID = " + driverID + " AND CAR_ID = " + carID + "AND SENSOR_ID = " + sensorID;
                 SqlCommand command = new SqlCommand(query, sqlConnection);
                 SqlDataAdapter dataAdapter = new SqlDataAdapter(command);
                 dataAdapter.Fill(TRIPS_TABLE);
