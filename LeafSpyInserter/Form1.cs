@@ -53,6 +53,14 @@ namespace NMEAInserter
                 errorCodeLabel.Text = "Select Car ID";
                 return;
             }
+
+            // SENSOR_IDが設定されているかをチェック
+            if (sensorIDcomboBox.SelectedIndex == -1)
+            {
+                errorCodeLabel.ForeColor = Color.Red;
+                errorCodeLabel.Text = "Select Sensor ID";
+                return;
+            }
             // ファイルパスが設定されているかをチェック
             if (filePath == null)
             {
@@ -246,7 +254,7 @@ namespace NMEAInserter
             /**** Trip ID のNullの許容の確認 ****/
             nullAllowance = this.nullAllowanceCheckBox.Checked;
 
-            Console.WriteLine("Driver ID : " + driverID + ", Car ID : " + carID + ", NullAllowance : " + nullAllowance);
+            Console.WriteLine("Driver ID : " + driverID + ", Car ID : " + carID + ", sensorID : " + sensorID + ", NullAllowance : " + nullAllowance);
 
             // インサート本処理の呼び出し
             insertData(this.filePath, driverID, carID, sensorID, nullAllowance);
