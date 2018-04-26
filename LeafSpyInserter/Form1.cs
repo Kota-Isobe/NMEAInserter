@@ -152,6 +152,97 @@ namespace NMEAInserter
                 #endregion
             }
 
+            /*** sensorIDの決定 ***/
+            switch (sensorIDcomboBox.SelectedIndex)
+            {
+                #region GUIで選択した端末とsensorIDの対応付け
+                case 0:
+                    sensorID = 1;
+                    break;
+                case 1:
+                    sensorID = 3;
+                    break;
+                case 2:
+                    sensorID = 4;
+                    break;
+                case 3:
+                    sensorID = 6;
+                    break;
+                case 4:
+                    sensorID = 7;
+                    break;
+                case 5:
+                    sensorID = 8;
+                    break;
+                case 6:
+                    sensorID = 9;
+                    break;
+                case 7:
+                    sensorID = 10;
+                    break;
+                case 8:
+                    sensorID = 11;
+                    break;
+                case 9:
+                    sensorID = 12;
+                    break;
+                case 10:
+                    sensorID = 13;
+                    break;
+                case 11:
+                    sensorID = 14;
+                    break;
+                case 12:
+                    sensorID = 15;
+                    break;
+                case 13:
+                    sensorID = 16;
+                    break;
+                case 14:
+                    sensorID = 17;
+                    break;
+                case 15:
+                    sensorID = 18;
+                    break;
+                case 16:
+                    sensorID = 19;
+                    break;
+                case 17:
+                    sensorID = 20;
+                    break;
+                case 18:
+                    sensorID = 21;
+                    break;
+                case 19:
+                    sensorID = 22;
+                    break;
+                case 20:
+                    sensorID = 23;
+                    break;
+                case 21:
+                    sensorID = 24;
+                    break;
+                case 22:
+                    sensorID = 25;
+                    break;
+                case 23:
+                    sensorID = 26;
+                    break;
+                case 24:
+                    sensorID = 27;
+                    break;
+                case 25:
+                    sensorID = 28;
+                    break;
+                case 26:
+                    sensorID = 98;
+                    break;
+                case 27:
+                    sensorID = 99;
+                    break;
+                #endregion
+            }
+
             /**** Trip ID のNullの許容の確認 ****/
             nullAllowance = this.nullAllowanceCheckBox.Checked;
 
