@@ -1,4 +1,4 @@
-~~現状、Driver ID と Car ID の設定は特に意味なし。 Driver ID:1, Car ID:3, Sensor ID:18 で固定。 ~~
+~~現状、Driver ID と Car ID の設定は特に意味なし。 Driver ID:1, Car ID:3, Sensor ID:18 で固定 ~~  
 ~~これらID の変更はForm1.csを直接いじる必要アリ（←要変更）~~  
 リストの変更のみForm1.csの変更をすれば良い。  
 ComboBoxにより、IDの変更ができる。    
