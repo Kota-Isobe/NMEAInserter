@@ -97,9 +97,8 @@
             this.carIDComboBox.Items.AddRange(new object[] {
             "3（LEAF）",
             "8（LEAF_XXXXXX）",
-            "13 2018春LEAF1",
-            "14 2018春LEAF2",
-            "15 2018春DAYZ"});
+            "11 2018春LEAF-ZE1",
+            "12 2018春DAYZ"});
             this.carIDComboBox.Location = new System.Drawing.Point(154, 55);
             this.carIDComboBox.Name = "carIDComboBox";
             this.carIDComboBox.Size = new System.Drawing.Size(121, 20);

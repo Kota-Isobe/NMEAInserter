@@ -145,17 +145,13 @@ namespace NMEAInserter
                 case 1:
                     carID = 8;
                     break;
-                // 2018春leaf1
+                // 2018春leaf-ZE1
                 case 2:
                     carID = 13;
                     break;
-                // 2018春leaf2
-                case 3:
-                    carID = 14;
-                    break;
                 // 2018春DAYZ
-                case 4:
-                    carID = 15;
+                case 3:
+                    carID = 12;
                     break;
                 #endregion
             }
