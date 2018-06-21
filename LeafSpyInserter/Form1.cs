@@ -254,6 +254,12 @@ namespace NMEAInserter
 
             // インサート本処理の呼び出し
             insertData(this.filePath, driverID, carID, sensorID, nullAllowance);
+
+            // インサート処理は切り分けるので、コメントアウト
+            MessageBox.Show("インサート終了",
+            "インサート終了",
+             MessageBoxButtons.OK,
+                MessageBoxIcon.Asterisk);
         }
 
         private void Form1_DragEnter(object sender, DragEventArgs e)
@@ -371,10 +377,20 @@ namespace NMEAInserter
                             String insertQuery2 = null;
                             int len1 = 0;
                             int len2 = 0;
-                            String c = Convert.ToString(fields[8]);
-                            if (c != null) len1 = c.Length;
-                            String d = Convert.ToString(fields[12]);
-                            if (d != null) len2 = d.Length;
+                            String c = null;
+                            String d = null;
+
+                            if (fields.Length > 8)
+                            {
+                                c = Convert.ToString(fields[8]);
+                                len1 = c.Length;
+                            }
+                            
+                            if (fields.Length > 12)
+                            {
+                                d = Convert.ToString(fields[12]);
+                                len2 = d.Length;
+                            }
 
                             if (len1 == 3)
                             {
@@ -431,7 +447,7 @@ namespace NMEAInserter
                                 }
                                 String g = null;
                                 String h = null;
-                                if (d != null)
+                                if (d != null && len2!= 0)
                                 {
                                     g = d.Substring(0, 2);
                                     h = d.Substring(len2 - 2, 2);
@@ -496,7 +512,7 @@ namespace NMEAInserter
                                 }
                                 String g = null;
                                 String h = null;
-                                if (d != null)
+                                if (d != null && len2 > 2)
                                 {
                                     g = d.Substring(0, 2);
                                     h = d.Substring(len2 - 2, 2);
