@@ -35,7 +35,6 @@ namespace NMEAInserter
         // インサート用SQL文用変数
         public static String insertQuery;
         // ファイルパス
-        private String filePath;
         private List<String> filePathList = new List<String>();
 
         private void startInsertingButton_Click(object sender, EventArgs e)
@@ -264,6 +263,9 @@ namespace NMEAInserter
             "インサート終了",
              MessageBoxButtons.OK,
                 MessageBoxIcon.Asterisk);
+
+            // 引き続き、次のインサートを開始できるように、ファイルパスリストをクリアする。
+            filePathList = new List<string>();
         }
 
         private void Form1_DragEnter(object sender, DragEventArgs e)
