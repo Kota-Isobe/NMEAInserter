@@ -254,7 +254,10 @@ namespace NMEAInserter
             Console.WriteLine("Driver ID : " + driverID + ", Car ID : " + carID + ", sensorID : " + sensorID + ", NullAllowance : " + nullAllowance);
 
             // インサート本処理の呼び出し
-            insertData(this.filePath, driverID, carID, sensorID, nullAllowance);
+            foreach (var filePath in filePathList)
+            {
+                insertData(filePath, driverID, carID, sensorID, nullAllowance);
+            }
 
             // インサート処理は切り分けるので、コメントアウト
             MessageBox.Show("インサート終了",
@@ -285,7 +288,7 @@ namespace NMEAInserter
             foreach (var filePath in (string[])e.Data.GetData(DataFormats.FileDrop))
             {
                 fileNameLabel.Text = filePath;
-                this.filePath = filePath;
+                this.filePathList.Add(filePath);
             }
             //string[] files = (string[])e.Data.GetData(DataFormats.FileDrop, false);
             // 渡されたファイルに対して処理を行う
