@@ -63,7 +63,7 @@ namespace NMEAInserter
                 return;
             }
             // ファイルパスが設定されているかをチェック
-            if (filePath == null)
+            if (filePathList.Count == 0)
             {
                 errorCodeLabel.ForeColor = Color.Red;
                 errorCodeLabel.Text = "Select inserting file";
