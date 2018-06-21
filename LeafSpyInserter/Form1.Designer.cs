@@ -44,13 +44,15 @@
             this.nullAllowanceCheckBox = new System.Windows.Forms.CheckBox();
             this.sensorIDcomboBox = new System.Windows.Forms.ComboBox();
             this.sensorIdLabel = new System.Windows.Forms.Label();
+            this.selectedFilesTextBox = new System.Windows.Forms.TextBox();
+            this.selectedFilesLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // driverIDLabel
             // 
             this.driverIDLabel.AutoSize = true;
             this.driverIDLabel.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.driverIDLabel.Location = new System.Drawing.Point(12, 35);
+            this.driverIDLabel.Location = new System.Drawing.Point(18, 158);
             this.driverIDLabel.Name = "driverIDLabel";
             this.driverIDLabel.Size = new System.Drawing.Size(68, 16);
             this.driverIDLabel.TabIndex = 0;
@@ -74,7 +76,7 @@
             "31 渡辺",
             "32 石田",
             "33 深野"});
-            this.driverIDComboBox.Location = new System.Drawing.Point(15, 55);
+            this.driverIDComboBox.Location = new System.Drawing.Point(21, 177);
             this.driverIDComboBox.Name = "driverIDComboBox";
             this.driverIDComboBox.Size = new System.Drawing.Size(121, 20);
             this.driverIDComboBox.TabIndex = 1;
@@ -84,7 +86,7 @@
             // 
             this.carIDLabel.AutoSize = true;
             this.carIDLabel.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.carIDLabel.Location = new System.Drawing.Point(191, 35);
+            this.carIDLabel.Location = new System.Drawing.Point(148, 158);
             this.carIDLabel.Name = "carIDLabel";
             this.carIDLabel.Size = new System.Drawing.Size(52, 16);
             this.carIDLabel.TabIndex = 2;
@@ -99,7 +101,7 @@
             "8（LEAF_XXXXXX）",
             "11 2018春LEAF-ZE1",
             "12 2018春DAYZ"});
-            this.carIDComboBox.Location = new System.Drawing.Point(194, 54);
+            this.carIDComboBox.Location = new System.Drawing.Point(151, 177);
             this.carIDComboBox.Name = "carIDComboBox";
             this.carIDComboBox.Size = new System.Drawing.Size(121, 20);
             this.carIDComboBox.TabIndex = 3;
@@ -107,7 +109,7 @@
             // startInsertingButton
             // 
             this.startInsertingButton.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.startInsertingButton.Location = new System.Drawing.Point(15, 82);
+            this.startInsertingButton.Location = new System.Drawing.Point(21, 203);
             this.startInsertingButton.Name = "startInsertingButton";
             this.startInsertingButton.Size = new System.Drawing.Size(121, 28);
             this.startInsertingButton.TabIndex = 4;
@@ -119,7 +121,7 @@
             // 
             this.indexLabel.AutoSize = true;
             this.indexLabel.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.indexLabel.Location = new System.Drawing.Point(172, 88);
+            this.indexLabel.Location = new System.Drawing.Point(148, 215);
             this.indexLabel.Name = "indexLabel";
             this.indexLabel.Size = new System.Drawing.Size(103, 16);
             this.indexLabel.TabIndex = 5;
@@ -129,7 +131,7 @@
             // 
             this.successInsertingLabel.AutoSize = true;
             this.successInsertingLabel.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.successInsertingLabel.Location = new System.Drawing.Point(15, 117);
+            this.successInsertingLabel.Location = new System.Drawing.Point(18, 234);
             this.successInsertingLabel.Name = "successInsertingLabel";
             this.successInsertingLabel.Size = new System.Drawing.Size(160, 16);
             this.successInsertingLabel.TabIndex = 6;
@@ -137,7 +139,7 @@
             // 
             // successInsertingTextBox
             // 
-            this.successInsertingTextBox.Location = new System.Drawing.Point(18, 137);
+            this.successInsertingTextBox.Location = new System.Drawing.Point(21, 253);
             this.successInsertingTextBox.MaxLength = 0;
             this.successInsertingTextBox.Multiline = true;
             this.successInsertingTextBox.Name = "successInsertingTextBox";
@@ -149,7 +151,7 @@
             // 
             this.failedInsertingLabel.AutoSize = true;
             this.failedInsertingLabel.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.failedInsertingLabel.Location = new System.Drawing.Point(18, 294);
+            this.failedInsertingLabel.Location = new System.Drawing.Point(18, 406);
             this.failedInsertingLabel.Name = "failedInsertingLabel";
             this.failedInsertingLabel.Size = new System.Drawing.Size(143, 16);
             this.failedInsertingLabel.TabIndex = 8;
@@ -157,7 +159,7 @@
             // 
             // failedInsertingTextBox
             // 
-            this.failedInsertingTextBox.Location = new System.Drawing.Point(18, 314);
+            this.failedInsertingTextBox.Location = new System.Drawing.Point(21, 425);
             this.failedInsertingTextBox.MaxLength = 0;
             this.failedInsertingTextBox.Multiline = true;
             this.failedInsertingTextBox.Name = "failedInsertingTextBox";
@@ -169,7 +171,7 @@
             // 
             this.fileNameLabel.AutoSize = true;
             this.fileNameLabel.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.fileNameLabel.Location = new System.Drawing.Point(13, 13);
+            this.fileNameLabel.Location = new System.Drawing.Point(18, 9);
             this.fileNameLabel.Name = "fileNameLabel";
             this.fileNameLabel.Size = new System.Drawing.Size(86, 16);
             this.fileNameLabel.TabIndex = 10;
@@ -179,7 +181,7 @@
             // 
             this.errorCodeLabel.AutoSize = true;
             this.errorCodeLabel.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.errorCodeLabel.Location = new System.Drawing.Point(21, 471);
+            this.errorCodeLabel.Location = new System.Drawing.Point(18, 578);
             this.errorCodeLabel.Name = "errorCodeLabel";
             this.errorCodeLabel.Size = new System.Drawing.Size(94, 16);
             this.errorCodeLabel.TabIndex = 11;
@@ -189,7 +191,7 @@
             // 
             this.nullAllowanceCheckBox.AutoSize = true;
             this.nullAllowanceCheckBox.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.nullAllowanceCheckBox.Location = new System.Drawing.Point(554, 55);
+            this.nullAllowanceCheckBox.Location = new System.Drawing.Point(405, 177);
             this.nullAllowanceCheckBox.Name = "nullAllowanceCheckBox";
             this.nullAllowanceCheckBox.Size = new System.Drawing.Size(138, 20);
             this.nullAllowanceCheckBox.TabIndex = 12;
@@ -228,7 +230,7 @@
             "27 SKT01",
             "98 Simulation",
             "99 simulation"});
-            this.sensorIDcomboBox.Location = new System.Drawing.Point(375, 54);
+            this.sensorIDcomboBox.Location = new System.Drawing.Point(278, 177);
             this.sensorIDcomboBox.Name = "sensorIDcomboBox";
             this.sensorIDcomboBox.Size = new System.Drawing.Size(121, 20);
             this.sensorIDcomboBox.TabIndex = 13;
@@ -237,18 +239,40 @@
             // 
             this.sensorIdLabel.AutoSize = true;
             this.sensorIdLabel.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.sensorIdLabel.Location = new System.Drawing.Point(382, 35);
+            this.sensorIdLabel.Location = new System.Drawing.Point(275, 158);
             this.sensorIdLabel.Name = "sensorIdLabel";
             this.sensorIdLabel.Size = new System.Drawing.Size(69, 16);
             this.sensorIdLabel.TabIndex = 14;
             this.sensorIdLabel.Text = "SensorID";
+            // 
+            // selectedFilesTextBox
+            // 
+            this.selectedFilesTextBox.Location = new System.Drawing.Point(21, 56);
+            this.selectedFilesTextBox.MaxLength = 0;
+            this.selectedFilesTextBox.Multiline = true;
+            this.selectedFilesTextBox.Name = "selectedFilesTextBox";
+            this.selectedFilesTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.selectedFilesTextBox.Size = new System.Drawing.Size(788, 99);
+            this.selectedFilesTextBox.TabIndex = 15;
+            // 
+            // selectedFilesLabel
+            // 
+            this.selectedFilesLabel.AutoSize = true;
+            this.selectedFilesLabel.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.selectedFilesLabel.Location = new System.Drawing.Point(18, 37);
+            this.selectedFilesLabel.Name = "selectedFilesLabel";
+            this.selectedFilesLabel.Size = new System.Drawing.Size(111, 16);
+            this.selectedFilesLabel.TabIndex = 16;
+            this.selectedFilesLabel.Text = "Selected Files...";
             // 
             // Form1
             // 
             this.AllowDrop = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(840, 496);
+            this.ClientSize = new System.Drawing.Size(840, 603);
+            this.Controls.Add(this.selectedFilesLabel);
+            this.Controls.Add(this.selectedFilesTextBox);
             this.Controls.Add(this.sensorIdLabel);
             this.Controls.Add(this.sensorIDcomboBox);
             this.Controls.Add(this.nullAllowanceCheckBox);
@@ -291,6 +315,8 @@
         private System.Windows.Forms.CheckBox nullAllowanceCheckBox;
         private System.Windows.Forms.ComboBox sensorIDcomboBox;
         private System.Windows.Forms.Label sensorIdLabel;
+        private System.Windows.Forms.TextBox selectedFilesTextBox;
+        private System.Windows.Forms.Label selectedFilesLabel;
     }
 }
 

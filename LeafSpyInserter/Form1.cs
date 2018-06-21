@@ -266,6 +266,7 @@ namespace NMEAInserter
 
             // 引き続き、次のインサートを開始できるように、ファイルパスリストをクリアする。
             filePathList = new List<string>();
+            this.selectedFilesTextBox.Clear();
         }
 
         private void Form1_DragEnter(object sender, DragEventArgs e)
@@ -291,28 +292,10 @@ namespace NMEAInserter
             {
                 fileNameLabel.Text = filePath;
                 this.filePathList.Add(filePath);
+                string[] splitedStr = filePath.Split('\\');
+                string filename = splitedStr[splitedStr.Length - 1];
+                this.selectedFilesTextBox.AppendText(filename + System.Environment.NewLine);
             }
-            //string[] files = (string[])e.Data.GetData(DataFormats.FileDrop, false);
-            // 渡されたファイルに対して処理を行う
-            //for (int i = 0; i < files.Length; i++)
-            ////Parallel.For(0, files.Length, i =>
-            //{
-            //    filePath = files[i];
-            //    /*foreach (var filePath in (string[])e.Data.GetData(DataFormats.FileDrop))
-            //    {
-            //        fileNameLabel.Text = filePath;
-            //        this.filePath = filePath;*/
-            //    insertData(filePath, 1, 3);
-            //    //Console.WriteLine("Success : " + filePath + System.Environment.NewLine);
-
-            //}
-    //});
-
-            // インサート処理は切り分けるので、コメントアウト
-            //MessageBox.Show("インサート終了",
-            //"インサート終了",
-            // MessageBoxButtons.OK,
-            //    MessageBoxIcon.Asterisk);
         }
 
         private static TextFieldParser GetParser(string filePath)
