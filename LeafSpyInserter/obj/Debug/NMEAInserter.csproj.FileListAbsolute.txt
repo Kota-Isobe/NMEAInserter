@@ -62,3 +62,14 @@ C:\Users\uemura\Desktop\NMEAInserter_全データ挿入用\NMEAInserter全デー
 C:\Users\uemura\Desktop\NMEAInserter_全データ挿入用\NMEAInserter全データインサート用(Nexus7-2012用)\LeafSpyInserter\obj\Debug\NMEAInserter.Form1.resources
 C:\Users\uemura\Desktop\NMEAInserter_全データ挿入用\NMEAInserter全データインサート用(Nexus7-2012用)\LeafSpyInserter\obj\Debug\LeafSpyInserter.Properties.Resources.resources
 C:\Users\uemura\Desktop\NMEAInserter_全データ挿入用\NMEAInserter全データインサート用(Nexus7-2012用)\LeafSpyInserter\obj\Debug\NMEAInserter.csproj.GenerateResource.Cache
+C:\Users\kichise\workspace\NMEAInserter\LeafSpyInserter\bin\Debug\LeafSpyInserter.exe.config
+C:\Users\kichise\workspace\NMEAInserter\LeafSpyInserter\bin\Debug\LeafSpyInserter.exe
+C:\Users\kichise\workspace\NMEAInserter\LeafSpyInserter\bin\Debug\LeafSpyInserter.pdb
+C:\Users\kichise\workspace\NMEAInserter\LeafSpyInserter\obj\Debug\NMEAInserter.csproj.ResolveComReference.cache
+C:\Users\kichise\workspace\NMEAInserter\LeafSpyInserter\obj\Debug\NMEAInserter.Form1.resources
+C:\Users\kichise\workspace\NMEAInserter\LeafSpyInserter\obj\Debug\LeafSpyInserter.Properties.Resources.resources
+C:\Users\kichise\workspace\NMEAInserter\LeafSpyInserter\obj\Debug\NMEAInserter.csproj.GenerateResource.cache
+C:\Users\kichise\workspace\NMEAInserter\LeafSpyInserter\obj\Debug\NMEAInserter.csproj.CoreCompileInputs.cache
+C:\Users\kichise\workspace\NMEAInserter\LeafSpyInserter\obj\Debug\LeafSpyInserter.exe
+C:\Users\kichise\workspace\NMEAInserter\LeafSpyInserter\obj\Debug\LeafSpyInserter.pdb
+C:\Users\kichise\workspace\NMEAInserter\LeafSpyInserter\obj\Debug\NMEAInserter.csprojAssemblyReference.cache

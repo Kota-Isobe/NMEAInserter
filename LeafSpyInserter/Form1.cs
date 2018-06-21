@@ -27,7 +27,7 @@ namespace NMEAInserter
         public static bool nullAllowance;
 
         // SENSOR_ID
-        public static readonly int SENSOR_ID = 17;  //29=Nexus7(2012)-1
+        //public static readonly int SENSOR_ID = 17;  //29=Nexus7(2012)-1
         // カラムの末尾
         public static int END_OF_COLUMN;
         // 作業用変数
@@ -36,6 +36,7 @@ namespace NMEAInserter
         public static String insertQuery;
         // ファイルパス
         private String filePath;
+        private List<String> filePathList = new List<String>();
 
         private void startInsertingButton_Click(object sender, EventArgs e)
         {
@@ -405,7 +406,7 @@ namespace NMEAInserter
                                 if (datum.androidTime != null)
                                 {
                                     DateTime dt = Convert.ToDateTime(datum.androidTime);
-                                    insertQuery = "INSERT INTO QZGSV_RAW VALUES('" + dt + "','" + SENSOR_ID + "','" + driverID + "','" + carID + "','" +
+                                    insertQuery = "INSERT INTO QZGSV_RAW VALUES('" + dt + "','" + sensorID + "','" + driverID + "','" + carID + "','" +
                                    datum.numberOfAllSentences + "','" + datum.sentenceNumber + "','" + datum.numberOfAllSatellites + "','" + datum.satelliteNumber +
                                    "','" + datum.elevation + "','" + datum.azimuth + "'," + "NULL" + ",'" + c + "')";
                                 }
@@ -430,7 +431,7 @@ namespace NMEAInserter
                                 if (datum.androidTime != null)
                                 {
                                     DateTime dt = Convert.ToDateTime(datum.androidTime);
-                                    insertQuery = "INSERT INTO QZGSV_RAW VALUES('" + dt + "','" + SENSOR_ID + "','" + driverID + "','" + carID + "','" +
+                                    insertQuery = "INSERT INTO QZGSV_RAW VALUES('" + dt + "','" + sensorID + "','" + driverID + "','" + carID + "','" +
                                    datum.numberOfAllSentences + "','" + datum.sentenceNumber + "','" + datum.numberOfAllSatellites + "','" + datum.satelliteNumber +
                                    "','" + datum.elevation + "','" + datum.azimuth + "','" + g + "','" + h + "')";
                                 }
@@ -455,7 +456,7 @@ namespace NMEAInserter
                                 if (datum.androidTime != null)
                                 {
                                     DateTime dt = Convert.ToDateTime(datum.androidTime);
-                                    insertQuery = "INSERT INTO QZGSV_RAW VALUES('" + dt + "','" + SENSOR_ID + "','" + driverID + "','" + carID + "','" +
+                                    insertQuery = "INSERT INTO QZGSV_RAW VALUES('" + dt + "','" + sensorID + "','" + driverID + "','" + carID + "','" +
                                    datum.numberOfAllSentences + "','" + datum.sentenceNumber + "','" + datum.numberOfAllSatellites + "','" + datum.satelliteNumber +
                                    "','" + datum.elevation + "','" + datum.azimuth + "'," + "NULL" + ",'" + h + "')";
                                 }
@@ -474,7 +475,7 @@ namespace NMEAInserter
                                     if (datum.androidTime != null)
                                     {
                                         DateTime dt2 = Convert.ToDateTime(datum.androidTime);
-                                        insertQuery2 = "INSERT INTO QZGSV_RAW VALUES('" + dt2 + "','" + SENSOR_ID + "','" + driverID + "','" + carID + "','" +
+                                        insertQuery2 = "INSERT INTO QZGSV_RAW VALUES('" + dt2 + "','" + sensorID + "','" + driverID + "','" + carID + "','" +
                                        datum.numberOfAllSentences + "','" + datum.sentenceNumber + "','" + datum.numberOfAllSatellites + "','" + datum.satelliteNumber +
                                        "','" + datum.elevation + "','" + datum.azimuth + "'," + "NULL" + ",'" + h + "')";
                                     }
@@ -494,7 +495,7 @@ namespace NMEAInserter
                                     if (datum.androidTime != null)
                                     {
                                         DateTime dt2 = Convert.ToDateTime(datum.androidTime);
-                                        insertQuery2 = "INSERT INTO QZGSV_RAW VALUES('" + dt2 + "','" + SENSOR_ID + "','" + driverID + "','" + carID + "','" +
+                                        insertQuery2 = "INSERT INTO QZGSV_RAW VALUES('" + dt2 + "','" + sensorID + "','" + driverID + "','" + carID + "','" +
                                        datum.numberOfAllSentences + "','" + datum.sentenceNumber + "','" + datum.numberOfAllSatellites + "','" + datum.satelliteNumber +
                                        "','" + datum.elevation + "','" + datum.azimuth + "','" + g + "','" + h + "')";
                                     }
@@ -520,7 +521,7 @@ namespace NMEAInserter
                                 if (datum.androidTime != null)
                                 {
                                     DateTime dt = Convert.ToDateTime(datum.androidTime);
-                                    insertQuery = "INSERT INTO QZGSV_RAW VALUES('" + dt + "','" + SENSOR_ID + "','" + driverID + "','" + carID + "','" +
+                                    insertQuery = "INSERT INTO QZGSV_RAW VALUES('" + dt + "','" + sensorID + "','" + driverID + "','" + carID + "','" +
                                    datum.numberOfAllSentences + "','" + datum.sentenceNumber + "','" + datum.numberOfAllSatellites + "','" + datum.satelliteNumber +
                                    "','" + datum.elevation + "','" + datum.azimuth + "','" + datum.SNRatio + "','" + h + "')";
                                 }
@@ -539,7 +540,7 @@ namespace NMEAInserter
                                     if (datum.androidTime != null)
                                     {
                                         DateTime dt2 = Convert.ToDateTime(datum.androidTime);
-                                        insertQuery2 = "INSERT INTO QZGSV_RAW VALUES('" + dt2 + "','" + SENSOR_ID + "','" + driverID + "','" + carID + "','" +
+                                        insertQuery2 = "INSERT INTO QZGSV_RAW VALUES('" + dt2 + "','" + sensorID + "','" + driverID + "','" + carID + "','" +
                                        datum.numberOfAllSentences + "','" + datum.sentenceNumber + "','" + datum.numberOfAllSatellites + "','" + datum.satelliteNumber +
                                        "','" + datum.elevation + "','" + datum.azimuth + "'," + "NULL" + ",'" + h + "')";
                                     }
@@ -559,7 +560,7 @@ namespace NMEAInserter
                                     if (datum.androidTime != null)
                                     {
                                         DateTime dt2 = Convert.ToDateTime(datum.androidTime);
-                                        insertQuery2 = "INSERT INTO QZGSV_RAW VALUES('" + dt2 + "','" + SENSOR_ID + "','" + driverID + "','" + carID + "','" +
+                                        insertQuery2 = "INSERT INTO QZGSV_RAW VALUES('" + dt2 + "','" + sensorID + "','" + driverID + "','" + carID + "','" +
                                        datum.numberOfAllSentences + "','" + datum.sentenceNumber + "','" + datum.numberOfAllSatellites + "','" + datum.satelliteNumber +
                                        "','" + datum.elevation + "','" + datum.azimuth + "','" + g + "','" + h + "')";
                                     }
@@ -645,7 +646,7 @@ namespace NMEAInserter
                             if (datum.androidTime != null)
                             {
                                 DateTime dt = Convert.ToDateTime(datum.androidTime);
-                                insertQuery = "INSERT INTO GPGGA_RAW VALUES('" + dt + "','" + SENSOR_ID + "','" + driverID + "','" + carID + "','" +
+                                insertQuery = "INSERT INTO GPGGA_RAW VALUES('" + dt + "','" + sensorID + "','" + driverID + "','" + carID + "','" +
                                 datum.UTCTime + "','" + datum.latitude + "','" + datum.NorS + "','" + datum.longitude + "','" + datum.EorW + "','"
                                 + datum.positionIdentificationQuality + "','" + datum.numberOfUsingSatellites + "','" + datum.HDOP + "','" + datum.heightOfAntenna + "','" +
                                 datum.unitOfAntenna + "','" + datum.heightOfGeoid + "','" + datum.unitOfGeoid + "','" + datum.DGPSTime + "'," + "NULL" + ",'" + b + "')";
@@ -727,7 +728,7 @@ namespace NMEAInserter
                                         if (datum.androidTime != null)
                                         {
                                             DateTime dt = Convert.ToDateTime(datum.androidTime);
-                                            insertQuery = "INSERT INTO GPRMC_RAW VALUES('" + dt + "','" + SENSOR_ID + "','" + driverID + "','" + carID + "','" +
+                                            insertQuery = "INSERT INTO GPRMC_RAW VALUES('" + dt + "','" + sensorID + "','" + driverID + "','" + carID + "','" +
                                             datum.UTCTime + "','" + datum.status + "','" + datum.latitude + "','" + datum.NorS + "','" + datum.longitude + "','"
                                             + datum.EorW + "','" + datum.movingSpeed + "','" + datum.movingAzimuth + "','" + datum.UTCDate + "','" + datum.magneticVariation +
                                             "','" + datum.magneticVariationDeclination + "'," + a + "," + b + ",'" + jst + "')";
@@ -795,7 +796,7 @@ namespace NMEAInserter
                                 if (datum.androidTime != null)
                                 {
                                     DateTime dt = Convert.ToDateTime(datum.androidTime);
-                                    insertQuery = "INSERT INTO GNGSA_RAW VALUES('" + dt + "','" + SENSOR_ID + "','" + driverID + "','" + carID + "','" +
+                                    insertQuery = "INSERT INTO GNGSA_RAW VALUES('" + dt + "','" + sensorID + "','" + driverID + "','" + carID + "','" +
                                     datum.mode + "','" + datum.identificationType + "'," + "0" + ",'" + datum.PDOP + "','" + datum.HDOP + "','" + datum.VDOP + "','"
                                     + b + "')";
                                 }
@@ -864,7 +865,7 @@ namespace NMEAInserter
                                     if (datum.androidTime != null)
                                     {
                                         DateTime dt = Convert.ToDateTime(datum.androidTime);
-                                        insertQuery = "INSERT INTO GNGSA_RAW VALUES('" + dt + "','" + SENSOR_ID + "','" + driverID + "','" + carID + "','" +
+                                        insertQuery = "INSERT INTO GNGSA_RAW VALUES('" + dt + "','" + sensorID + "','" + driverID + "','" + carID + "','" +
                                           datum.mode + "','" + datum.identificationType + "','" + datum.satelliteNumber + "','" + datum.PDOP + "','" + datum.HDOP +
                                           "','" + datum.VDOP + "','" + b + "')";
                                     }
@@ -934,7 +935,7 @@ namespace NMEAInserter
                                     DateTime dt = Convert.ToDateTime(datum.androidTime);
                                     insertQuery = "INSERT INTO GPGSA_RAW VALUES('";
                                     insertQuery += dt + "','";
-                                    insertQuery += SENSOR_ID + "','";
+                                    insertQuery += sensorID + "','";
                                     insertQuery += driverID + "','" + carID + "','" +
                                     datum.mode + "','" + datum.identificationType + "',";
                                     insertQuery += "0" + ",'" + datum.PDOP + "','" + datum.HDOP + "','";
@@ -1006,7 +1007,7 @@ namespace NMEAInserter
                                     if (datum.androidTime != null)
                                     {
                                         DateTime dt = Convert.ToDateTime(datum.androidTime);
-                                        if (datum.satelliteNumber != null) insertQuery = "INSERT INTO GPGSA_RAW VALUES('" + dt + "','" + SENSOR_ID + "','" + driverID
+                                        if (datum.satelliteNumber != null) insertQuery = "INSERT INTO GPGSA_RAW VALUES('" + dt + "','" + sensorID + "','" + driverID
                                                 + "','" + carID + "','" + datum.mode + "','" + datum.identificationType + "','" + datum.satelliteNumber + "','" + datum.PDOP + "','"
                                                 + datum.HDOP + "','" + a + "','" + b + "')";
                                     }
@@ -1072,7 +1073,7 @@ namespace NMEAInserter
                                 if (datum.androidTime != null)
                                 {
                                     DateTime dt = Convert.ToDateTime(datum.androidTime);
-                                    insertQuery = "INSERT INTO QZGSA_RAW VALUES('" + dt + "','" + SENSOR_ID + "','" + driverID + "','" + carID + "','" +
+                                    insertQuery = "INSERT INTO QZGSA_RAW VALUES('" + dt + "','" + sensorID + "','" + driverID + "','" + carID + "','" +
                                     datum.mode + "','" + datum.identificationType + "'," + "0" + ",'" + datum.PDOP + "','" + datum.HDOP + "','" + Convert.ToSingle(a) 
                                     + "','" + b + "')";
                                 }
@@ -1139,7 +1140,7 @@ namespace NMEAInserter
                                     if (datum.androidTime != null)
                                     {
                                         DateTime dt = Convert.ToDateTime(datum.androidTime);
-                                        if (datum.satelliteNumber != null) insertQuery = "INSERT INTO QZGSA_RAW VALUES('" + dt + "','" + SENSOR_ID + "','" + driverID
+                                        if (datum.satelliteNumber != null) insertQuery = "INSERT INTO QZGSA_RAW VALUES('" + dt + "','" + sensorID + "','" + driverID
                                                 + "','" + carID + "','" + datum.mode + "','" + datum.identificationType + "','" + datum.satelliteNumber + "','" + datum.PDOP 
                                                 + "','" + datum.HDOP + "','" + Convert.ToSingle(a) + "','" + b + "')";
                                     }
@@ -1210,7 +1211,7 @@ namespace NMEAInserter
                                 if (datum.androidTime != null)
                                 {
                                     DateTime dt = Convert.ToDateTime(datum.androidTime);
-                                    insertQuery = "INSERT INTO GPGSV_RAW VALUES('" + dt + "','" + SENSOR_ID + "','" + driverID + "','" + carID + "','" +
+                                    insertQuery = "INSERT INTO GPGSV_RAW VALUES('" + dt + "','" + sensorID + "','" + driverID + "','" + carID + "','" +
                                         datum.numberOfAllSentences + "','" + datum.sentenceNumber + "','" + datum.numberOfAllSatellites + "','" + datum.satelliteNumber +
                                         "','" + datum.elevation + "','" + datum.azimuth + "'," + "NULL" + ",'" + "NULL" + "')";
                                 }
@@ -1228,7 +1229,7 @@ namespace NMEAInserter
                                 if (datum.androidTime != null)
                                 {
                                     DateTime dt = Convert.ToDateTime(datum.androidTime);
-                                    insertQuery = "INSERT INTO GPGSV_RAW VALUES('" + dt + "','" + SENSOR_ID + "','" + driverID + "','" + carID + "','" +
+                                    insertQuery = "INSERT INTO GPGSV_RAW VALUES('" + dt + "','" + sensorID + "','" + driverID + "','" + carID + "','" +
                                         datum.numberOfAllSentences + "','" + datum.sentenceNumber + "','" + datum.numberOfAllSatellites + "','" + datum.satelliteNumber +
                                         "','" + datum.elevation + "','" + datum.azimuth + "','" + "Null" + "','" + "Null" + "')";
                                 }
@@ -1247,7 +1248,7 @@ namespace NMEAInserter
                                 if (datum.androidTime != null)
                                 {
                                     DateTime dt = Convert.ToDateTime(datum.androidTime);
-                                    insertQuery = "INSERT INTO GPGSV_RAW VALUES('" + dt + "','" + SENSOR_ID + "','" + driverID + "','" + carID + "','" +
+                                    insertQuery = "INSERT INTO GPGSV_RAW VALUES('" + dt + "','" + sensorID + "','" + driverID + "','" + carID + "','" +
                                         datum.numberOfAllSentences + "','" + datum.sentenceNumber + "','" + datum.numberOfAllSatellites + "','" + datum.satelliteNumber +
                                         "','" + datum.elevation + "','" + datum.azimuth + "','" + datum.SNRatio + "','" + "NULL" + "')";
                                 }
@@ -1264,7 +1265,7 @@ namespace NMEAInserter
                                 if (datum.androidTime != null && datum.azimuth != null)
                                 {
                                     DateTime dt2 = Convert.ToDateTime(datum.androidTime);
-                                    insertQuery2 = "INSERT INTO GPGSV_RAW VALUES('" + dt2 + "','" + SENSOR_ID + "','" + driverID + "','" + carID + "','" +
+                                    insertQuery2 = "INSERT INTO GPGSV_RAW VALUES('" + dt2 + "','" + sensorID + "','" + driverID + "','" + carID + "','" +
                                         datum.numberOfAllSentences + "','" + datum.sentenceNumber + "','" + datum.numberOfAllSatellites + "','" + datum.satelliteNumber +
                                         "','" + datum.elevation + "','" + datum.azimuth + "'," + "NULL" + ",'" + "NULL" + "')";
                                 }
@@ -1282,7 +1283,7 @@ namespace NMEAInserter
                                 if (datum.androidTime != null)
                                 {
                                     DateTime dt = Convert.ToDateTime(datum.androidTime);
-                                    insertQuery = "INSERT INTO GPGSV_RAW VALUES('" + dt + "','" + SENSOR_ID + "','" + driverID + "','" + carID + "','" +
+                                    insertQuery = "INSERT INTO GPGSV_RAW VALUES('" + dt + "','" + sensorID + "','" + driverID + "','" + carID + "','" +
                                         datum.numberOfAllSentences + "','" + datum.sentenceNumber + "','" + datum.numberOfAllSatellites + "','" + datum.satelliteNumber +
                                         "','" + datum.elevation + "','" + datum.azimuth + "','" + datum.SNRatio + "','" + "Null" + "')";
                                 }
@@ -1299,7 +1300,7 @@ namespace NMEAInserter
                                 if (datum.androidTime != null)
                                 {
                                     DateTime dt2 = Convert.ToDateTime(datum.androidTime);
-                                    insertQuery2 = "INSERT INTO GPGSV_RAW VALUES('" + dt2 + "','" + SENSOR_ID + "','" + driverID + "','" + carID + "','" +
+                                    insertQuery2 = "INSERT INTO GPGSV_RAW VALUES('" + dt2 + "','" + sensorID + "','" + driverID + "','" + carID + "','" +
                                         datum.numberOfAllSentences + "','" + datum.sentenceNumber + "','" + datum.numberOfAllSatellites + "','" + datum.satelliteNumber +
                                         "','" + datum.elevation + "','" + datum.azimuth + "','" + "NULL" + "','" + "NULL" + "')";
                                 }
@@ -1317,7 +1318,7 @@ namespace NMEAInserter
                                 if (datum.androidTime != null)
                                 {
                                     DateTime dt = Convert.ToDateTime(datum.androidTime);
-                                    insertQuery = "INSERT INTO GPGSV_RAW VALUES('" + dt + "','" + SENSOR_ID + "','" + driverID + "','" + carID + "','" +
+                                    insertQuery = "INSERT INTO GPGSV_RAW VALUES('" + dt + "','" + sensorID + "','" + driverID + "','" + carID + "','" +
                                         datum.numberOfAllSentences + "','" + datum.sentenceNumber + "','" + datum.numberOfAllSatellites + "','" + datum.satelliteNumber +
                                         "','" + datum.elevation + "','" + datum.azimuth + "','" + datum.SNRatio + "','" + "NULL" + "')";
                                 }
@@ -1334,7 +1335,7 @@ namespace NMEAInserter
                                 if (datum.androidTime != null)
                                 {
                                     DateTime dt2 = Convert.ToDateTime(datum.androidTime);
-                                    insertQuery2 = "INSERT INTO GPGSV_RAW VALUES('" + dt2 + "','" + SENSOR_ID + "','" + driverID + "','" + carID + "','" +
+                                    insertQuery2 = "INSERT INTO GPGSV_RAW VALUES('" + dt2 + "','" + sensorID + "','" + driverID + "','" + carID + "','" +
                                         datum.numberOfAllSentences + "','" + datum.sentenceNumber + "','" + datum.numberOfAllSatellites + "','" + datum.satelliteNumber +
                                         "','" + datum.elevation + "','" + datum.azimuth + "','" + datum.SNRatio + "','" + "NULL" + "')";
                                 }
@@ -1351,7 +1352,7 @@ namespace NMEAInserter
                                 if (datum.androidTime != null)
                                 {
                                     DateTime dt3 = Convert.ToDateTime(datum.androidTime);
-                                    insertQuery3 = "INSERT INTO GPGSV_RAW VALUES('" + dt3 + "','" + SENSOR_ID + "','" + driverID + "','" + carID + "','" +
+                                    insertQuery3 = "INSERT INTO GPGSV_RAW VALUES('" + dt3 + "','" + sensorID + "','" + driverID + "','" + carID + "','" +
                                         datum.numberOfAllSentences + "','" + datum.sentenceNumber + "','" + datum.numberOfAllSatellites + "','" + datum.satelliteNumber +
                                         "','" + datum.elevation + "','" + datum.azimuth + "'," + "NULL" + ",'" + "NULL" + "')";
                                 }
@@ -1370,7 +1371,7 @@ namespace NMEAInserter
                                 if (datum.androidTime != null)
                                 {
                                     DateTime dt = Convert.ToDateTime(datum.androidTime);
-                                    insertQuery = "INSERT INTO GPGSV_RAW VALUES('" + dt + "','" + SENSOR_ID + "','" + driverID + "','" + carID + "','" +
+                                    insertQuery = "INSERT INTO GPGSV_RAW VALUES('" + dt + "','" + sensorID + "','" + driverID + "','" + carID + "','" +
                                         datum.numberOfAllSentences + "','" + datum.sentenceNumber + "','" + datum.numberOfAllSatellites + "','" + datum.satelliteNumber +
                                         "','" + datum.elevation + "','" + datum.azimuth + "','" + datum.SNRatio + "','" + "NULL" + "')";
                                 }
@@ -1387,7 +1388,7 @@ namespace NMEAInserter
                                 if (datum.androidTime != null)
                                 {
                                     DateTime dt2 = Convert.ToDateTime(datum.androidTime);
-                                    insertQuery2 = "INSERT INTO GPGSV_RAW VALUES('" + dt2 + "','" + SENSOR_ID + "','" + driverID + "','" + carID + "','" +
+                                    insertQuery2 = "INSERT INTO GPGSV_RAW VALUES('" + dt2 + "','" + sensorID + "','" + driverID + "','" + carID + "','" +
                                         datum.numberOfAllSentences + "','" + datum.sentenceNumber + "','" + datum.numberOfAllSatellites + "','" + datum.satelliteNumber +
                                         "','" + datum.elevation + "','" + datum.azimuth + "','" + datum.SNRatio + "','" + "NULL" + "')";
                                 }
@@ -1404,7 +1405,7 @@ namespace NMEAInserter
                                 if (datum.androidTime != null)
                                 {
                                     DateTime dt3 = Convert.ToDateTime(datum.androidTime);
-                                    insertQuery3 = "INSERT INTO GPGSV_RAW VALUES('" + dt3 + "','" + SENSOR_ID + "','" + driverID + "','" + carID + "','" +
+                                    insertQuery3 = "INSERT INTO GPGSV_RAW VALUES('" + dt3 + "','" + sensorID + "','" + driverID + "','" + carID + "','" +
                                         datum.numberOfAllSentences + "','" + datum.sentenceNumber + "','" + datum.numberOfAllSatellites + "','" + datum.satelliteNumber +
                                         "','" + datum.elevation + "','" + datum.azimuth + "','" + f.Substring(0, 2) + "','" + "NULL" + "')";
                                 }
@@ -1422,7 +1423,7 @@ namespace NMEAInserter
                                 if (datum.androidTime != null)
                                 {
                                     DateTime dt = Convert.ToDateTime(datum.androidTime);
-                                    insertQuery = "INSERT INTO GPGSV_RAW VALUES('" + dt + "','" + SENSOR_ID + "','" + driverID + "','" + carID + "','" +
+                                    insertQuery = "INSERT INTO GPGSV_RAW VALUES('" + dt + "','" + sensorID + "','" + driverID + "','" + carID + "','" +
                                         datum.numberOfAllSentences + "','" + datum.sentenceNumber + "','" + datum.numberOfAllSatellites + "','" + datum.satelliteNumber +
                                         "','" + datum.elevation + "','" + datum.azimuth + "','" + datum.SNRatio + "','" + "NULL" + "')";
                                 }
@@ -1439,7 +1440,7 @@ namespace NMEAInserter
                                 if (datum.androidTime != null)
                                 {
                                     DateTime dt2 = Convert.ToDateTime(datum.androidTime);
-                                    insertQuery2 = "INSERT INTO GPGSV_RAW VALUES('" + dt2 + "','" + SENSOR_ID + "','" + driverID + "','" + carID + "','" +
+                                    insertQuery2 = "INSERT INTO GPGSV_RAW VALUES('" + dt2 + "','" + sensorID + "','" + driverID + "','" + carID + "','" +
                                         datum.numberOfAllSentences + "','" + datum.sentenceNumber + "','" + datum.numberOfAllSatellites + "','" + datum.satelliteNumber +
                                         "','" + datum.elevation + "','" + datum.azimuth + "','" + datum.SNRatio + "','" + "NULL" + "')";
                                 }
@@ -1456,7 +1457,7 @@ namespace NMEAInserter
                                 if (datum.androidTime != null)
                                 {
                                     DateTime dt3 = Convert.ToDateTime(datum.androidTime);
-                                    insertQuery3 = "INSERT INTO GPGSV_RAW VALUES('" + dt3 + "','" + SENSOR_ID + "','" + driverID + "','" + carID + "','" +
+                                    insertQuery3 = "INSERT INTO GPGSV_RAW VALUES('" + dt3 + "','" + sensorID + "','" + driverID + "','" + carID + "','" +
                                         datum.numberOfAllSentences + "','" + datum.sentenceNumber + "','" + datum.numberOfAllSatellites + "','" + datum.satelliteNumber +
                                         "','" + datum.elevation + "','" + datum.azimuth + "','" + datum.SNRatio + "','" + "NULL" + "')";
                                 }
@@ -1473,7 +1474,7 @@ namespace NMEAInserter
                                 if (datum.androidTime != null)
                                 {
                                     DateTime dt4 = Convert.ToDateTime(datum.androidTime);
-                                    insertQuery4 = "INSERT INTO GPGSV_RAW VALUES('" + dt4 + "','" + SENSOR_ID + "','" + driverID + "','" + carID + "','" +
+                                    insertQuery4 = "INSERT INTO GPGSV_RAW VALUES('" + dt4 + "','" + sensorID + "','" + driverID + "','" + carID + "','" +
                                         datum.numberOfAllSentences + "','" + datum.sentenceNumber + "','" + datum.numberOfAllSatellites + "','" + datum.satelliteNumber +
                                         "','" + datum.elevation + "','" + datum.azimuth + "'," + "NULL" + ",'" + "NULL" + "')";
                                 }
@@ -1491,7 +1492,7 @@ namespace NMEAInserter
                                 if (datum.androidTime != null)
                                 {
                                     DateTime dt = Convert.ToDateTime(datum.androidTime);
-                                    insertQuery = "INSERT INTO GPGSV_RAW VALUES('" + dt + "','" + SENSOR_ID + "','" + driverID + "','" + carID + "','" +
+                                    insertQuery = "INSERT INTO GPGSV_RAW VALUES('" + dt + "','" + sensorID + "','" + driverID + "','" + carID + "','" +
                                         datum.numberOfAllSentences + "','" + datum.sentenceNumber + "','" + datum.numberOfAllSatellites + "','" + datum.satelliteNumber +
                                         "','" + datum.elevation + "','" + datum.azimuth + "','" + datum.SNRatio + "','" + "NULL" + "')";
                                 }
@@ -1508,7 +1509,7 @@ namespace NMEAInserter
                                 if (datum.androidTime != null)
                                 {
                                     DateTime dt2 = Convert.ToDateTime(datum.androidTime);
-                                    insertQuery2 = "INSERT INTO GPGSV_RAW VALUES('" + dt2 + "','" + SENSOR_ID + "','" + driverID + "','" + carID + "','" +
+                                    insertQuery2 = "INSERT INTO GPGSV_RAW VALUES('" + dt2 + "','" + sensorID + "','" + driverID + "','" + carID + "','" +
                                         datum.numberOfAllSentences + "','" + datum.sentenceNumber + "','" + datum.numberOfAllSatellites + "','" + datum.satelliteNumber +
                                         "','" + datum.elevation + "','" + datum.azimuth + "','" + datum.SNRatio + "','" + "NULL" + "')";
                                 }
@@ -1525,7 +1526,7 @@ namespace NMEAInserter
                                 if (datum.androidTime != null)
                                 {
                                     DateTime dt3 = Convert.ToDateTime(datum.androidTime);
-                                    insertQuery3 = "INSERT INTO GPGSV_RAW VALUES('" + dt3 + "','" + SENSOR_ID + "','" + driverID + "','" + carID + "','" +
+                                    insertQuery3 = "INSERT INTO GPGSV_RAW VALUES('" + dt3 + "','" + sensorID + "','" + driverID + "','" + carID + "','" +
                                         datum.numberOfAllSentences + "','" + datum.sentenceNumber + "','" + datum.numberOfAllSatellites + "','" + datum.satelliteNumber +
                                         "','" + datum.elevation + "','" + datum.azimuth + "','" + datum.SNRatio + "','" + "NULL" + "')";
                                 }
@@ -1542,7 +1543,7 @@ namespace NMEAInserter
                                 if (datum.androidTime != null)
                                 {
                                     DateTime dt4 = Convert.ToDateTime(datum.androidTime);
-                                    insertQuery4 = "INSERT INTO GPGSV_RAW VALUES('" + dt4 + "','" + SENSOR_ID + "','" + driverID + "','" + carID + "','" +
+                                    insertQuery4 = "INSERT INTO GPGSV_RAW VALUES('" + dt4 + "','" + sensorID + "','" + driverID + "','" + carID + "','" +
                                         datum.numberOfAllSentences + "','" + datum.sentenceNumber + "','" + datum.numberOfAllSatellites + "','" + datum.satelliteNumber +
                                         "','" + datum.elevation + "','" + datum.azimuth + "','" + "NULL" + "','" + "NULL" + "')";
                                 }
