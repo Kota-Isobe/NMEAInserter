@@ -84,7 +84,7 @@
             // 
             this.carIDLabel.AutoSize = true;
             this.carIDLabel.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.carIDLabel.Location = new System.Drawing.Point(151, 35);
+            this.carIDLabel.Location = new System.Drawing.Point(191, 35);
             this.carIDLabel.Name = "carIDLabel";
             this.carIDLabel.Size = new System.Drawing.Size(52, 16);
             this.carIDLabel.TabIndex = 2;
@@ -99,7 +99,7 @@
             "8（LEAF_XXXXXX）",
             "11 2018春LEAF-ZE1",
             "12 2018春DAYZ"});
-            this.carIDComboBox.Location = new System.Drawing.Point(154, 55);
+            this.carIDComboBox.Location = new System.Drawing.Point(194, 54);
             this.carIDComboBox.Name = "carIDComboBox";
             this.carIDComboBox.Size = new System.Drawing.Size(121, 20);
             this.carIDComboBox.TabIndex = 3;
@@ -142,7 +142,7 @@
             this.successInsertingTextBox.Multiline = true;
             this.successInsertingTextBox.Name = "successInsertingTextBox";
             this.successInsertingTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.successInsertingTextBox.Size = new System.Drawing.Size(512, 150);
+            this.successInsertingTextBox.Size = new System.Drawing.Size(788, 150);
             this.successInsertingTextBox.TabIndex = 7;
             // 
             // failedInsertingLabel
@@ -162,7 +162,7 @@
             this.failedInsertingTextBox.Multiline = true;
             this.failedInsertingTextBox.Name = "failedInsertingTextBox";
             this.failedInsertingTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.failedInsertingTextBox.Size = new System.Drawing.Size(512, 150);
+            this.failedInsertingTextBox.Size = new System.Drawing.Size(788, 150);
             this.failedInsertingTextBox.TabIndex = 9;
             // 
             // fileNameLabel
@@ -189,48 +189,47 @@
             // 
             this.nullAllowanceCheckBox.AutoSize = true;
             this.nullAllowanceCheckBox.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.nullAllowanceCheckBox.Location = new System.Drawing.Point(416, 55);
+            this.nullAllowanceCheckBox.Location = new System.Drawing.Point(554, 55);
             this.nullAllowanceCheckBox.Name = "nullAllowanceCheckBox";
             this.nullAllowanceCheckBox.Size = new System.Drawing.Size(138, 20);
             this.nullAllowanceCheckBox.TabIndex = 12;
             this.nullAllowanceCheckBox.Text = "Allow null Trip ID";
             this.nullAllowanceCheckBox.UseVisualStyleBackColor = true;
             // 
-            // sensorComboBox
+            // sensorIDcomboBox
             // 
             this.sensorIDcomboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.sensorIDcomboBox.FormattingEnabled = true;
             this.sensorIDcomboBox.Items.AddRange(new object[] {
-                "1 747Pro&WAA010",
-                "3 N-06C",
-                "4 747Pro&WAA010",
-                "6 AT3S0",
-                "7 SC-01C",
-                "8 AT570",
-                "9 MZ604",
-                "10 MZ604",
-                "11 A1_07",
-                "12 AT570",
-                "13 AT570",
-                "14 Nexus7",
-                "15 SO-04D",
-                "16 AT570",
-                "17 Nexus7",
-                "18 Nexus7",
-                "19 ACE",
-                "20 Nexus7",
-                "21 XperiaGX_SO",
-                "22 SO-02F",
-                "23 Nexus6",
-                "24 Nexus7(2012)",
-                "25 Nexus7",
-                "26 Zenfone2",
-                "27 SKT01",
-                "98 Simulation",
-                "99 simulation"
-            });
-            this.sensorIDcomboBox.Location = new System.Drawing.Point(289, 55);
-            this.sensorIDcomboBox.Name = "sensorIDComboBox";
+            "1 747Pro&WAA010",
+            "3 N-06C",
+            "4 747Pro&WAA010",
+            "6 AT3S0",
+            "7 SC-01C",
+            "8 AT570",
+            "9 MZ604",
+            "10 MZ604",
+            "11 A1_07",
+            "12 AT570",
+            "13 AT570",
+            "14 Nexus7",
+            "15 SO-04D",
+            "16 AT570",
+            "17 Nexus7",
+            "18 Nexus7",
+            "19 ACE",
+            "20 Nexus7",
+            "21 XperiaGX_SO",
+            "22 SO-02F",
+            "23 Nexus6",
+            "24 Nexus7(2012)",
+            "25 Nexus7",
+            "26 Zenfone2",
+            "27 SKT01",
+            "98 Simulation",
+            "99 simulation"});
+            this.sensorIDcomboBox.Location = new System.Drawing.Point(375, 54);
+            this.sensorIDcomboBox.Name = "sensorIDcomboBox";
             this.sensorIDcomboBox.Size = new System.Drawing.Size(121, 20);
             this.sensorIDcomboBox.TabIndex = 13;
             // 
@@ -238,9 +237,9 @@
             // 
             this.sensorIdLabel.AutoSize = true;
             this.sensorIdLabel.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.sensorIdLabel.Location = new System.Drawing.Point(286, 36);
+            this.sensorIdLabel.Location = new System.Drawing.Point(382, 35);
             this.sensorIdLabel.Name = "sensorIdLabel";
-            this.sensorIdLabel.Size = new System.Drawing.Size(52, 16);
+            this.sensorIdLabel.Size = new System.Drawing.Size(69, 16);
             this.sensorIdLabel.TabIndex = 14;
             this.sensorIdLabel.Text = "SensorID";
             // 
@@ -249,7 +248,7 @@
             this.AllowDrop = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(550, 496);
+            this.ClientSize = new System.Drawing.Size(840, 496);
             this.Controls.Add(this.sensorIdLabel);
             this.Controls.Add(this.sensorIDcomboBox);
             this.Controls.Add(this.nullAllowanceCheckBox);
