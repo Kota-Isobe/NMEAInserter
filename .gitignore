@@ -1,2 +1,7 @@
 # ignore .vs
 .vs
+
+LeafSpyInserter/obj
+LeafSpyInserter/obj/Debug
+LeafSpyInserter/bin
+LeafSpyInserter/bin/Debug
