@@ -239,9 +239,12 @@ namespace NMEAInserter
                     sensorID = 28;
                     break;
                 case 26:
-                    sensorID = 98;
+                    sensorID = 29;
                     break;
                 case 27:
+                    sensorID = 98;
+                    break;
+                case 28:
                     sensorID = 99;
                     break;
                 #endregion

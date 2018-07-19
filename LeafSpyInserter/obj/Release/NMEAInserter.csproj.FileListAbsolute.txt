@@ -17,3 +17,14 @@ C:\Users\isobe\Desktop\NMEAInserter20160630\LeafSpyInserter\obj\Release\NMEAInse
 C:\Users\isobe\Desktop\NMEAInserter20160630\LeafSpyInserter\obj\Release\LeafSpyInserter.Properties.Resources.resources
 C:\Users\isobe\Desktop\NMEAInserter20160630\LeafSpyInserter\obj\Release\NMEAInserter.csproj.GenerateResource.Cache
 C:\Users\isobe\Desktop\NMEAInserter20160630\LeafSpyInserter\obj\Release\NMEAInserter.csprojResolveAssemblyReference.cache
+C:\Users\kichise\workspace\NMEAInserter\LeafSpyInserter\bin\Release\LeafSpyInserter.exe.config
+C:\Users\kichise\workspace\NMEAInserter\LeafSpyInserter\bin\Release\LeafSpyInserter.exe
+C:\Users\kichise\workspace\NMEAInserter\LeafSpyInserter\bin\Release\LeafSpyInserter.pdb
+C:\Users\kichise\workspace\NMEAInserter\LeafSpyInserter\obj\Release\NMEAInserter.csprojAssemblyReference.cache
+C:\Users\kichise\workspace\NMEAInserter\LeafSpyInserter\obj\Release\NMEAInserter.csproj.ResolveComReference.cache
+C:\Users\kichise\workspace\NMEAInserter\LeafSpyInserter\obj\Release\NMEAInserter.Form1.resources
+C:\Users\kichise\workspace\NMEAInserter\LeafSpyInserter\obj\Release\LeafSpyInserter.Properties.Resources.resources
+C:\Users\kichise\workspace\NMEAInserter\LeafSpyInserter\obj\Release\NMEAInserter.csproj.GenerateResource.cache
+C:\Users\kichise\workspace\NMEAInserter\LeafSpyInserter\obj\Release\NMEAInserter.csproj.CoreCompileInputs.cache
+C:\Users\kichise\workspace\NMEAInserter\LeafSpyInserter\obj\Release\LeafSpyInserter.exe
+C:\Users\kichise\workspace\NMEAInserter\LeafSpyInserter\obj\Release\LeafSpyInserter.pdb

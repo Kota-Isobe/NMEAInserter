@@ -228,6 +228,8 @@
             "25 Nexus7",
             "26 Zenfone2",
             "27 SKT01",
+            "28 FLEAZ_BEAT",
+            "29 Xperia_X_Performance",
             "98 Simulation",
             "99 simulation"});
             this.sensorIDcomboBox.Location = new System.Drawing.Point(278, 177);
